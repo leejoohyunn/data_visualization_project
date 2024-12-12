@@ -1,4 +1,3 @@
-# pages/2_교육정도별_취업자.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -47,4 +46,3 @@ with col2:
     st.markdown("#### 상위 감소 분야")
     top_decrease = education_data.nsmallest(3, '증감')
     st.dataframe(top_decrease[['직업중분류', '증감']])
-
