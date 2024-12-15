@@ -8,3 +8,12 @@ font = "sans serif"
 [server]
 enableCORS = false
 enableXsrfProtection = false
+[server]
+maxUploadSize = 200
+maxMessageSize = 200
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base="light"
