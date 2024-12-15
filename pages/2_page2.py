@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import folium
 from streamlit_folium import st_folium
+from pathlib import Path  # Path import 추가
 
 def load_data():
     # 데이터 생성
