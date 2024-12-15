@@ -107,19 +107,17 @@ def create_stability_chart(df):
 
 def main():
     st.set_page_config(layout="wide")
-    st.title('💼 종사상지위별 직업대분류별 취업자 심층 분석 대시보드')
+    st.title('종사상지위별 직업대분류별 취업자 심층 분석 대시보드')
     
     df = load_data()
     
     # 주요 지표 표시
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3 = st.columns(4)
     with col1:
-        st.metric("전체 취업자 비율", "100%")
-    with col2:
         st.metric("임금근로자 비율", "77.2%", "안정적")
-    with col3:
+    with col2:
         st.metric("상용직 비율", "74.1%", "높음")
-    with col4:
+    with col3:
         st.metric("고용 안정성 지수", 
                  f"{df['고용안정성_지수'].mean():.1f}",
                  "중상위")
