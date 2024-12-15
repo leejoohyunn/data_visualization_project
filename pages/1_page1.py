@@ -131,7 +131,7 @@ def main():
     df = load_data()
 
     # 교육정도별 취업자 현황
-    st.header('1. 교육정도별 취업자 전체 현황')
+    st.header('교육정도별 취업자 전체 현황')
     
     # 데이터 준비
     total_change = df['취업자증감'].sum()
@@ -171,7 +171,7 @@ def main():
     fig_total = create_total_comparison(df)
     st.plotly_chart(fig_total, use_container_width=True)
     
-    st.header('2. 교육정도별 직업 분포 분석')
+    st.header('교육정도별 직업 분포 분석')
     
     col1, col2 = st.columns(2)
     
@@ -185,7 +185,7 @@ def main():
         fig_2024 = create_composition_chart(df, '2024')
         st.plotly_chart(fig_2024, use_container_width=True)
     
-    st.header('3. 구성비 변화 분석')
+    st.header('구성비 변화 분석')
     fig_heatmap = create_change_heatmap(df)
     st.plotly_chart(fig_heatmap, use_container_width=True)
     
