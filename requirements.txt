@@ -6,3 +6,4 @@ streamlit-folium==0.15.0
 numpy==1.26.2
 matplotlib==3.8.2
 seaborn==0.13.0
+statsmodels
