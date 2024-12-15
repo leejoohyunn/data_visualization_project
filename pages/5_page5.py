@@ -80,7 +80,7 @@ def main():
         </style>
     """, unsafe_allow_html=True)
     
-    st.title('📊 교육분류별 취업자 현황 종합 분석')
+    st.title('교육분류별 취업자 현황 종합 분석')
     
     df = load_data()
     
