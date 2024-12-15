@@ -236,5 +236,12 @@ def main():
         fig_parallel.update_layout(title='교육분류별 특성 패턴 분석')
         st.plotly_chart(fig_parallel, use_container_width=True)
 
+        st.info("""
+        ### 주요 발견점
+        1. 공학계열의 높은 취업 비중
+        2. 직업 선택의 전공-직무 불일치 현상 (인문학, 예술 분야에서 불일치 현상 두드러짐)
+        3. 보건 분야의 높은 전공 연계성
+        4. 교육분류별 고용 안정성 차이 (산업 구조 변화와 노동시장 수요 변화가 반영됐음을 시사)
+        """)
 if __name__ == "__main__":
     main()
