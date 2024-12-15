@@ -102,7 +102,7 @@ def main():
     df = load_data()
     
     # GeoJSON 파일 로드
-    with open("C:/Users/melod/OneDrive/바탕 화면/2024-02/데시/final_project/refined_korea1.json", 'r', encoding='utf-8') as f:
+    with open("data/refined_korea1.json", 'r', encoding='utf-8') as f:
         geojson = json.load(f)
     
     # 탭 생성
