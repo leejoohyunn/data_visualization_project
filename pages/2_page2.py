@@ -128,7 +128,7 @@ def main():
             st.error(f"오류 발생: {str(e)}")
             st.write("현재 경로:", os.getcwd())
             st.write("파일 경로:", json_path)
-    
+            return
     # 탭 생성
     tab1, tab2 = st.tabs(['지도 기반 분석', '상세 분석'])
     
