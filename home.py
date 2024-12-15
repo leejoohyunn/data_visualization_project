@@ -67,7 +67,8 @@ st.markdown("""
 # 데이터 관련 참고사항
 st.sidebar.header("📌 데이터 참고사항")
 st.sidebar.markdown("""
-- 데이터 출처: 통계청 경제활동인구조사
+- 데이터 출처: 2024년 상반기 지역별고용조사 취업자의 산업 및 직업별 특성
+- 데이터 링크: https://kostat.go.kr/board.es?mid=a10301030300&bid=211&act=view&list_no=433146
 - 기준시점: 2024년 상반기
 - 갱신주기: 반기별
 """)
