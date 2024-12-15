@@ -126,7 +126,7 @@ def create_change_heatmap(df):
 
 def main():
     st.set_page_config(layout="wide")
-    st.title('📊 교육정도별 직업분류별 취업자 분석 대시보드')
+    st.title('교육정도별 직업분류별 취업자 분석 대시보드')
     
     df = load_data()
 
