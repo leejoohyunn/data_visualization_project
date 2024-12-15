@@ -7,6 +7,7 @@ import folium
 from streamlit_folium import st_folium
 from pathlib import Path  # Path import 추가
 import logging
+import os
 
 # 로깅 레벨 설정
 logging.basicConfig(level=logging.DEBUG)
@@ -124,11 +125,11 @@ def main():
             geojson = json.load(f)
             st.write("GeoJSON 파일 로드 성공!")
             st.write("GeoJSON 데이터 크기:", len(str(geojson)), "bytes")
-        except Exception as e:
-            st.error(f"오류 발생: {str(e)}")
-            st.write("현재 경로:", os.getcwd())
-            st.write("파일 경로:", json_path)
-            return
+    except Exception as e:
+        st.error(f"오류 발생: {str(e)}")
+        st.write("현재 경로:", os.getcwd())
+        st.write("파일 경로:", json_path)
+        return
     # 탭 생성
     tab1, tab2 = st.tabs(['지도 기반 분석', '상세 분석'])
     
