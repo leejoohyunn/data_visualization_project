@@ -112,7 +112,7 @@ def main():
     df = load_data()
     
     # 주요 지표 표시
-    col1, col2, col3 = st.columns(4)
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.metric("임금근로자 비율", "77.2%", "안정적")
     with col2:
