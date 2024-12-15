@@ -101,7 +101,15 @@ def create_folium_map(df, geojson_data):
     return m
 
 def main():
-    st.set_page_config(layout="wide")
+    st.set_page_config(
+        layout="wide",
+        page_title="지역별 취업자 현황",
+        menu_items={
+            'Get Help': 'https://www.streamlit.io/community',
+            'Report a bug': "https://github.com/your-repo/issues",
+            'About': "# 지역별 취업자 현황 분석 대시보드"
+        }
+    )
     st.title('지역별 직업종분류별 취업자 분석 대시보드')
     
     # 데이터 로드
@@ -114,12 +122,12 @@ def main():
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
             geojson = json.load(f)
-    except FileNotFoundError:
-        st.error(f"GeoJSON 파일을 찾을 수 없습니다. 경로: {json_path}")
-        return
-    except Exception as e:
-        st.error(f"파일을 불러오는 중 오류가 발생했습니다: {str(e)}")
-        return
+            st.write("GeoJSON 파일 로드 성공!")
+            st.write("GeoJSON 데이터 크기:", len(str(geojson)), "bytes")
+        except Exception as e:
+            st.error(f"오류 발생: {str(e)}")
+            st.write("현재 경로:", os.getcwd())
+            st.write("파일 경로:", json_path)
     
     # 탭 생성
     tab1, tab2 = st.tabs(['지도 기반 분석', '상세 분석'])
@@ -161,7 +169,12 @@ def main():
                 hover_data=['전체_취업자', '증감', '1위_취업자', '1위_증감']
             )
             
-            fig.update_layout(height=600)
+            fig.update_layout(
+                height=800,  # 높이 증가
+                width=1200,  # 너비 증가
+                autosize=True,
+                margin=dict(l=0, r=0, t=30, b=0)
+            )
             st.plotly_chart(fig, use_container_width=True)
         
         else:
