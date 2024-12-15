@@ -101,9 +101,19 @@ def main():
     # 데이터 로드
     df = load_data()
     
-    # GeoJSON 파일 로드
-    with open("data/refined_korea1.json", 'r', encoding='utf-8') as f:
-        geojson = json.load(f)
+    # 파일 경로 설정
+    CURRENT_DIR = Path(__file__).parent.parent
+    json_path = CURRENT_DIR / "assets" / "refined_korea1.json"
+    
+    try:
+        with open(json_path, 'r', encoding='utf-8') as f:
+            geojson = json.load(f)
+    except FileNotFoundError:
+        st.error(f"GeoJSON 파일을 찾을 수 없습니다. 경로: {json_path}")
+        return
+    except Exception as e:
+        st.error(f"파일을 불러오는 중 오류가 발생했습니다: {str(e)}")
+        return
     
     # 탭 생성
     tab1, tab2 = st.tabs(['지도 기반 분석', '상세 분석'])
