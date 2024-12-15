@@ -242,6 +242,16 @@ def main():
             color_continuous_scale='RdBu'
         )
         st.plotly_chart(fig_rank, use_container_width=True)
+        
+        st.info("""
+        ### 주요 발견점
+        1. 수도권 취업자 집중 현상
+        2. 지역별 주력 산업 차이
+        3. 취업자 감소 지역의 구조적 문제 (농어업 중심 지역에서 취업자 감소가 드러남)
+        4. 서비스업 중심의 2차 직종 분포 (서비스 산업이 주요 고용 창출 동력임을 시사)
+        
+        이러한 패턴은 직업군별로 고용형태가 뚜렷하게 구분되어 있음을 시사합니다.
+        """)
 
 if __name__ == "__main__":
     main()
