@@ -1,9 +1,9 @@
-streamlit==1.31.0
-pandas==2.1.4
-plotly==5.18.0
-folium==0.15.0
-streamlit-folium==0.15.0
-numpy==1.26.2
-matplotlib==3.8.2
-seaborn==0.13.0
+streamlit
+pandas
+plotly
+folium
+streamlit-folium
+numpy
+matplotlib
+seaborn
 statsmodels
