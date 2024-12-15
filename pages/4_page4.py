@@ -128,7 +128,7 @@ def main():
             st.plotly_chart(fig_mid, use_container_width=True)
         
         # 전체 임금 분포 요약
-        st.markdown("""
+        st.info("""
         ### 주요 발견사항
         1. **고임금 직종**
            - 관리자의 88%가 400만원 이상의 급여를 받고 있음
