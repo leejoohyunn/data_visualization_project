@@ -6,6 +6,11 @@ import plotly.graph_objects as go
 import folium
 from streamlit_folium import st_folium
 from pathlib import Path  # Path import 추가
+import logging
+
+# 로깅 레벨 설정
+logging.basicConfig(level=logging.DEBUG)
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def load_data():
     # 데이터 생성
