@@ -189,7 +189,7 @@ def main():
     fig_heatmap = create_change_heatmap(df)
     st.plotly_chart(fig_heatmap, use_container_width=True)
     
-    st.header('4. 교육정도별 상세 분석')
+    st.header('교육정도별 상세 분석')
     selected_edu = st.selectbox('교육정도 선택', df['교육정도'].unique())
     
     edu_data = df[df['교육정도'] == selected_edu]
